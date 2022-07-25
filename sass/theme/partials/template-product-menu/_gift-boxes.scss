@@ -1,0 +1,13 @@
+&.page-id-439 {
+
+  .product-list {
+    @include media-breakpoint-up(sm) {
+      .link-panel {
+        p {
+          max-width: 300px;
+        }
+      }
+    }
+  }
+
+}

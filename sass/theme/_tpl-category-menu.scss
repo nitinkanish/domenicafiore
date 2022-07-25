@@ -1,0 +1,5 @@
+body.page-template-tpl_category-menu,
+body.post-type-archive-product {
+  @import "partials/template-category-menu/hero";
+  @import "partials/template-category-menu/link-blocks";
+}

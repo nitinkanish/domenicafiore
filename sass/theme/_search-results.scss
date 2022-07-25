@@ -1,0 +1,110 @@
+body.search {
+  text-align: left;
+
+  h1 {
+    margin: 30px auto;
+    font-size: 1.75rem;
+  }
+
+  &.search-results {
+    .header-row {}
+
+    .search-results-container {
+      .result-row {
+        padding: 60px 0px;
+        border-bottom: solid 1px $grey-dark;
+        article {
+          .entry-header {
+            .entry-meta {
+              display: flex;
+              justify-content: space-between;
+              max-width: 475px;
+              margin-bottom: 30px;
+              .left {
+                .category {
+                  a {}
+                }
+                .byline {
+
+                  .author {}
+                }
+              }
+              .right {
+                .date {
+
+                }
+              }
+
+              @include media-breakpoint-up(md) {}
+            }
+          }
+          .entry-summary {}
+          .btn {
+            margin-top: 30px;
+          }
+        }
+        &:first-child {
+          padding-top: 0px;
+        }
+        &:last-child {
+          border-bottom: 0px;
+        }
+      }
+    }
+    .pagination-container {
+      .pagination-row {
+        nav {
+          display: inline-block;
+          margin-top: 0px;
+          margin-bottom: 50px;
+          .pagination {
+            .page-item {
+              a {
+                color: $grey-text;
+                background: none;
+                border: 0px;
+              }
+              .page-link {
+                background: none;
+                border: 0px;
+                .svg-inline--fa {
+                  font-size: 0.75rem;
+                }
+              }
+              &.active {
+                a {
+                  background: none;
+                  color: $primary;
+                  border: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // No Results
+  &.search-no-results {
+    h3.page-title {
+      margin-top: 30px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    .search-form-container {
+      background-color: $grey-form-container;
+      padding: 25px 40px;
+      max-width: 470px;
+      margin: 0 auto 30px;
+      .df-form {
+        .input-group {
+          .field {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

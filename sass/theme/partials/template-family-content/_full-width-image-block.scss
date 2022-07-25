@@ -1,0 +1,8 @@
+.full-width-image-block {
+  margin-bottom: 15px;
+  img {}
+
+  @include media-breakpoint-up(sm) {
+    max-width: 730px;
+  }
+}

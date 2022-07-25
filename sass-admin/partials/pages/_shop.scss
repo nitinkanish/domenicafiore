@@ -1,0 +1,48 @@
+body.wp-admin #shop_meta_box {
+  .inside {
+    input[type=url],
+    input[type=text],
+    textarea {
+      width: 100%;
+      max-width: 600px;
+    }
+    .inline-btn {
+      display: inline-block;
+    }
+
+    #links-repeater {
+      .link-block-table {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 600px;
+        tbody {
+          display: block;
+          border: solid 1px #e1e1e1;
+          padding: 10px 20px;
+          margin-bottom: 5px;
+          tr {
+            width: 100%;
+            display: block;
+            margin-bottom: 15px;
+            td {
+              width: 100%;
+              display: block;
+              input[type=text],
+              input[type=url],
+              textarea {
+                width: 100%;
+              }
+            }
+          }
+        }
+        tfoot {
+          tr {
+            td {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

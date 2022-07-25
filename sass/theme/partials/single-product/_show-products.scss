@@ -1,0 +1,115 @@
+.show-products {
+  text-align: center;
+  padding-bottom: 25px;
+  .image-container {
+    position: relative;
+    img {
+      width: 250px;
+    }
+    .stock {
+      display: none;
+      position: absolute;
+      &.in-stock {}
+    }
+  }
+  .size {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .price {
+    color: $primary;
+    font-size: 0.875rem;
+    margin-top: 3px;
+  }
+  .buttons {
+    .btn {
+      min-width: 130px;
+      margin-bottom: 12px;
+    }
+    .tinv-wraper {
+      .tinvwl_add_to_wishlist_button {
+        // padding: 8px 0px;
+        // height: 32px;
+      }
+    }
+  }
+
+  .row {
+    &.single {}
+    &.grouped {
+      .col-6 {
+        margin-bottom: 30px;
+        .description {
+          margin-top: 20px;
+          p {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .woocommerce {
+    .woocommerce-info {
+      display: none;
+    }
+  }
+
+
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 100px;
+    .image-container {
+      img {
+        width: 350px;
+      }
+    }
+    .description {
+      min-height: 140px;
+    }
+    .size {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      font-size: 0.875rem;
+    }
+    .quantity.buttons_added {
+      input[type="button"] {
+        font-size: 2.25rem;
+        width: 25px;
+        height: 29px;
+      }
+      input.qty.text {
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        margin: auto 25px;
+        font-size: 1.15rem;
+        padding: 20px 0px 18px;
+      }
+    }
+    .price {
+      font-size: 1.15rem;
+    }
+    .buttons {
+      .btn {
+        margin: 0px 5px 15px;
+        vertical-align: middle;
+      }
+      // .tinv-wraper {
+      //   margin: 0 5px 15px;
+      //   display: inline-block;
+      //   vertical-align: middle;
+      //   .tinvwl_add_to_wishlist_button {
+      //     padding: 8px 0px;
+      //     margin: 0px;
+      //     width: 200px;
+      //     height: 40px;
+      //   }
+      // }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .description {
+      min-height: 100px;
+    }
+  }
+}

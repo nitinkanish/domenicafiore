@@ -1,0 +1,286 @@
+#become-a-member {
+  background-image: url('../img/ooc-login-bg-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+
+  .login-signup-row {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .form-section-title {
+      img {
+        width: 45px;
+        margin-bottom: 7px;
+      }
+      h2 {
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: 0.08rem;
+        margin-bottom: 12px;
+      }
+    }
+
+    .join, .sign-in {
+      padding-left: 50px;
+      padding-right: 50px;
+      .form-container-outer {
+        padding: 10px;
+        .form-container {
+          padding: 45px 20px 35px;
+          text-align: left;
+          margin-bottom: 0px;
+          background: none;
+          h2 {
+            font-weight: bold;
+            letter-spacing: 0.08rem;
+            margin-bottom: 15px;
+          }
+          form {
+            .form-group {
+              margin-bottom: 5px;
+            }
+            .form-group input,
+            .form-check label {
+              font-size: 0.85rem;
+            }
+            input[type="submit"],
+            button[type="submit"] {
+              padding: 0.25rem 13px;
+              font-weight: bold;
+              font-size: 0.75rem;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+
+    .join {
+      .form-container-outer {
+        background-color: black;
+        margin-bottom: 20px;
+        h2 {
+          color: $primary;
+        }
+        .form-container {
+          border: solid 1px $primary;
+          form.register {
+            .form-group {
+              input[type="email"],
+              input[type="password"] {
+                background-color: $grey-form-container;
+                &::-webkit-input-placeholder {
+                  color: $primary;
+                }
+                &::-moz-placeholder {
+                  color: $primary;
+                }
+                &:-ms-input-placeholder {
+                  color: $primary;
+                }
+                &:-moz-placeholder {
+                  color: $primary;
+                }
+              }
+            }
+            .form-check {
+              margin-bottom: 15px;
+              margin-top: 5px;
+            }
+            .button-row {
+              margin-bottom: 0px;
+              .btn {
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sign-in {
+      .form-container-outer {
+        background-color: $grey-form-container;
+        .form-container {
+          border: solid 1px white;
+          form.login {
+            .lost-password-column {
+              margin-bottom: 15px;
+              .form-check {
+                input {
+                  top: 7px;
+                }
+                label {
+                  vertical-align: -webkit-baseline-middle;
+                }
+              }
+              .lost-password {
+                text-align: right;
+              }
+            }
+            .submit-column {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  @include media-breakpoint-up(sm) {
+    background-image: url('../img/ooc-login-bg-desktop.jpg');
+
+    .login-signup-row {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      max-width: 750px;
+
+      .form-section-title {
+        text-align: center;
+        img {
+          width: 70px;
+          margin-bottom: 20px;
+        }
+        h2 {
+          font-size: 1.45rem;
+          font-weight: bold;
+          margin-bottom: 35px;
+        }
+      }
+
+      .join, .sign-in {
+        padding-left: 0px;
+        padding-right: 0px;
+        .form-container-outer {
+          margin-bottom: 0px;
+          height: 100%;
+          .form-container {
+            height: 100%;
+            h2 {
+              font-size: 1.45rem;
+              margin-bottom: 25px;
+            }
+            form {
+              .form-group {
+                margin-bottom: 10px;
+              }
+              .form-group input,
+              .form-check label {
+                font-size: 1rem;
+              }
+              .terms-row, .lost-password-row {
+                margin-top: 15px;
+              }
+              .lost-password-row {
+                .lost-password-column {
+                  .lost-password {
+                    margin-top: 0px;
+                    a {
+                      font-size: 1rem;
+                    }
+                  }
+                }
+              }
+              input[type="submit"],
+              button[type="submit"] {
+                padding: 7px 17px;
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .join {
+        padding-right: 10px;
+        .form-container-outer {
+          margin-right: 0px;
+          margin-left: auto;
+        }
+      }
+
+      .sign-in {
+        padding-left: 10px;
+        .form-container-outer {
+
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .login-signup-row {
+      max-width: 800px;
+
+      .form-section-title {
+        img {
+          width: 80px;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .join, .sign-in {
+        .form-container-outer {
+          .form-container {
+            padding: 45px 20px 45px;
+            h2 {
+              font-size: 1.5rem;
+            }
+            form {
+              .form-group {
+                input {
+                  padding: 10px 0 11px 16px;
+                }
+              }
+              .form-group input,
+              .form-check label {}
+              input[type="submit"],
+              button[type="submit"] {
+                font-size: 1.15rem;
+                min-width: 82px;
+                height: 41px;
+                padding: 0px 15px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+
+      .join {
+        .form-container-outer {
+          .form-container {
+            form.register {
+              .form-group {
+
+              }
+              .form-check {
+                margin-bottom: 35px;
+              }
+            }
+          }
+        }
+      }
+
+      .sign-in {
+        .form-container-outer {
+          .form-container {
+            form.login {
+              .lost-password-column {
+                margin-bottom: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

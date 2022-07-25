@@ -1,0 +1,42 @@
+.tinv-wishlist {
+  .tinv-modal {
+    .tinv-overlay {
+      background-color: white;
+    }
+    .tinv-table {
+      .tinv-cell {
+        .tinv-modal-inner {
+          background-color: black;
+          color: $primary;
+          i {
+            display: none;
+          }
+          .tinv-txt {
+            font-weight: 200;
+            margin: 0px;
+            margin-bottom: 15px;
+          }
+          .tinvwl-buttons-group {
+            margin-top: 0px;
+            .button.tinvwl_button_close {
+              display: none;
+            }
+            .tinvwl_button_view {
+              max-width: 200px;
+              svg {
+                display: none;
+                margin-right: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.tinv-modal-open {
+      .tinv-overlay {
+        opacity: 0.6;
+      }
+    }
+  }
+}

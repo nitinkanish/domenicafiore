@@ -1,0 +1,76 @@
+.products-block {
+  margin-top: 30px;
+  text-align: center;
+
+  .product-column {
+    .buttons {
+      .tinv-wraper {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    border-bottom: solid 1px $grey-medium-dark;
+    padding-bottom: 70px;
+
+    .product-column {
+      margin: auto auto 0px auto;
+      display: block;
+      .product-image {
+        img {
+          max-width: 350px;
+        }
+        // Badges
+        .df-product-badge {
+          width: 60px;
+          height: 60px;
+          bottom: -15px;
+          .df-badge {
+            width: 60px;
+            height: 60px;
+            .shape {
+
+            }
+          }
+          .message {
+            font-size: 1rem;
+          }
+        }
+      }
+      .product-description {
+        margin: 25px auto 5px;
+        max-width: 250px;
+        font-size: 1rem;
+      }
+      .price-container {
+        margin-top: 17px;
+        .price {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+        .sale-info {
+          top: -17px;
+          font-size: 13px;
+          .regular-price {
+          }
+        }
+      }
+      .buttons {
+        .btn {
+          min-width: 130px;
+          max-width: none;
+          // min-width: auto;
+          padding: 6px 15px;
+          margin: 0px 5px;
+        }
+      }
+    }
+  }
+
+  .shop-all-btn {
+    margin-top: 75px;
+    font-size: 1.75rem;
+    padding: 5px 11px;
+  }
+}

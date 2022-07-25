@@ -1,0 +1,126 @@
+.modal {
+  .modal-dialog {
+    max-width: 550px;
+    .modal-content {
+      border-radius: 0px;
+      padding: 16px;
+      border: solid 1px $primary;
+      background-color: black;
+      background-size: 100%;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      .modal-content-inner {
+        border: solid 2px $primary;
+        text-align: center;
+        position: relative;
+        .modal-header {
+          border: 0px;
+          padding: 25px 0px 0px;
+          display: block;
+          .modal-title {
+            margin: 0 auto;
+            font-size: 18px;
+            color: $primary;
+            letter-spacing: 0;
+            line-height: 1.2;
+          }
+          .wreath-divider {
+            margin-top: 13px;
+          }
+          .close {
+            position: absolute;
+            top: 0px;
+            right: 5px;
+            padding: 3px;
+            opacity: 1;
+            margin: 0;
+            .close-icon {
+              line {
+                stroke: white;
+                stroke-width: 1px;
+                stroke-linecap: round;
+                stroke-miterlimit: 10;
+                transition: stroke 0.25s;
+              }
+            }
+            &:hover {
+              .close-icon {
+                line {
+                  stroke: $primary;
+                }
+              }
+            }
+          }
+        }
+        .modal-body {
+          padding: 13px 35px 25px;
+          hr {
+            border-top: solid 1px $grey-medium;
+            max-width: 34px;
+            margin: 13px auto;
+          }
+          .intro {
+            max-width: 400px;
+            margin: 0 auto;
+            font-size: 12px;
+          }
+          .details {
+            p {
+              font-size: 12px;
+            }
+          }
+          .bottom {
+            .fine-print {
+              font-size: 11px;
+              margin-bottom: 4px;
+              &:last-child {
+                margin-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        .modal-content-inner {
+          .modal-header {
+            padding: 50px 0px 0px;
+            .modal-title {
+              font-size: 25px;
+              line-height: 1.2;
+            }
+            .wreath-divider {
+              margin-top: 20px;
+            }
+            .close {
+              top: 10px;
+              right: 10px;
+              padding: 3px;
+            }
+          }
+          .modal-body {
+            padding: 20px 35px 50px;
+            hr {
+              margin: 22px auto;
+            }
+            .intro {
+              font-size: 16px;
+            }
+            .details {
+              p {
+                font-size: 12.5px;
+              }
+            }
+            .bottom {
+              .fine-print {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#localPickupModal {
+
+}

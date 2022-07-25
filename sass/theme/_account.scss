@@ -1,0 +1,96 @@
+body.woocommerce-account {
+  article {
+    h1.entry-title {
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+    }
+
+    .woocommerce {
+      padding-bottom: 40px;
+      .woocommerce-MyAccount-navigation {
+        .list-group {
+          .list-group-item {
+            background-color: $grey-form-container;
+            color: white;
+          }
+        }
+      }
+      .woocommerce-MyAccount-content {
+
+        // Customer Details
+        .woocommerce-customer-details {
+
+        }
+
+        // Addresses
+        .woocommerce-Addresses {
+          .woocommerce-Address {
+            margin-bottom: 30px;
+          }
+        }
+
+        .woocommerce-EditAccountForm,
+        .woocommerce-EditAddressForm {
+          background-color: $grey-form-container;
+          padding: 20px;
+          .woocommerce-FormRow {
+            label {
+              font-size: 0.75rem;
+              margin-bottom: 0px;
+              color: grey;
+            }
+          }
+          fieldset {
+            margin-top: 30px;
+            legend {
+              font-size: 1.5rem;
+            }
+          }
+          input.btn {
+            margin-top: 30px;
+          }
+        }
+
+        // Columns
+        .woocommerce-columns {
+          display: flex;
+          flex-wrap: wrap;
+          .woocommerce-column {
+            float: none;
+            flex: 0 0 100%;
+            width: 100%;
+            max-width: none;
+            .woocommerce-column__title {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      h1.entry-title {
+        font-size: 1.75rem;
+        margin-top: 65px;
+        margin-bottom: 35px;
+        text-align: center;
+      }
+
+      .woocommerce {
+        .woocommerce-MyAccount-content {
+          // Columns
+          .woocommerce-columns {
+            flex-wrap: nowrap;
+            .woocommerce-column {
+              float: none;
+              flex: 0 0 50%;
+              min-width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @import "partials/account/login-signup";
+}

@@ -1,0 +1,28 @@
+.copy {
+  padding-top: 20px;
+  .page {
+    a {
+      color: $grey-text;
+      transition: color 0.25s;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 70px;
+    .page {
+      h3 {
+        margin-bottom: 18px;
+      }
+      p {
+        font-size: .875rem;
+        line-height: 1.6125rem;
+        &:last-child {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}

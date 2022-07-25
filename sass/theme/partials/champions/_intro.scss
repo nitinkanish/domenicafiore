@@ -1,0 +1,37 @@
+.hero {
+  .hero-image {
+    @include hero-bg-cover;
+    padding-bottom: $hero-aspect-ratio-xs;
+    display: table;
+  }
+
+  @include media-breakpoint-up (sm) {
+    .hero-image {
+      padding-bottom: $hero-aspect-ratio-sm;
+    }
+  }
+  @include media-breakpoint-up (md) {
+    .hero-image {
+      padding-bottom: $hero-aspect-ratio-md;
+    }
+  }
+  @include media-breakpoint-up (lg) {
+    .hero-image {
+      padding-bottom: $hero-aspect-ratio-lg;
+    }
+  }
+}
+
+.intro {
+  padding: 30px 27px 10px;
+  text-align: center;
+  @include media-breakpoint-up(sm) {
+    padding: 40px 27px 30px;
+    .intro-text {
+      font-size: 1rem;
+      line-height: 1.6125rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+  }
+}

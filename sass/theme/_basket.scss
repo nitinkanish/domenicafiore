@@ -1,0 +1,6 @@
+body.page-template-page_basket {
+  @import "partials/basket/outer";
+}
+
+@import "partials/basket/checkout";
+@import "partials/basket/cart";

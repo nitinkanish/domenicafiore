@@ -1,0 +1,217 @@
+// Mega menu styles
+.df-mega-menu {
+  background-color: black;
+  padding: 0px;
+  margin-bottom: 3px;
+  .df-mega-menu-column {
+    flex: 0 1 100%;
+    // Accordion Cards
+    .card {
+      border: 0px;
+      background-color: black;
+      .card-header {
+        padding: 0px 5px;
+        border-bottom: solid 1px darken($grey-text, 30%);
+        .btn {
+          text-align: left;
+          text-decoration: none;
+          text-transform: none;
+          color: white;
+          font-family: $font-family-base;
+          font-size: 0.8rem;
+          font-weight: 300;
+          width: 100%;
+          height: 30px;
+          display: flex;
+          justify-content: space-between;
+          .text {}
+          .collapse-arrow {
+            img {
+              transform: rotate(0deg);
+            }
+          }
+        }
+        .btn[aria-expanded="true"] {
+          .collapse-arrow {
+            img {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+      // Accordion collapsing section
+      .df-mega-collapse {
+        .card-body {
+          padding: 0px;
+          background-color: $grey-light;
+          color: white;
+          .df-mega-menu-submenu {
+            padding: 0px;
+            list-style-type: none;
+            margin-bottom: 0px;
+            .df-mega-menu-link {
+              padding: 0px 5px;
+              border-bottom: solid 1px darken($grey-light, 10%);
+              a {
+                text-align: left;
+                text-decoration: none;
+                text-transform: none;
+                color: white;
+                font-family: $font-family-base;
+                font-size: 0.8rem;
+                font-weight: 300;
+                padding: .35rem 1.25rem;
+                height: 30px;
+                display: inline-block;
+                margin-left: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Non-accordion Submenu
+    > .df-mega-menu-submenu {
+      padding: 0px;
+      list-style-type: none;
+    }
+
+    .df-mega-menu-link {
+      padding: 0px 5px;
+      border-bottom: solid 1px darken($grey-text, 30%);
+      a {
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        color: white;
+        font-family: $font-family-base;
+        font-size: 0.8rem;
+        font-weight: 300;
+        padding: .35rem 1.25rem;
+        height: 30px;
+        display: inline-block;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    z-index: 5000;
+    top: 110px;
+    left: 0px;
+    right: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .df-mega-menu-column {
+      flex-grow: 1;
+      max-width: 100%;
+      flex-basis: 25%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-right: solid 1px darken($grey-text, 30%);
+      &:last-child {
+        border-right: 0px;
+      }
+      // Accordion Cards
+      .card {
+        .collapse {
+          display: block;
+        }
+        .card-header {
+          border-bottom: 0px;
+          .btn {
+            opacity: 1;
+            min-height: 26px;
+            min-width: auto;
+            height: auto;
+            padding-right: 0px;
+            cursor: default;
+            .text {
+              color: white;
+              font-size: 1rem;
+              white-space: normal;
+            }
+            .collapse-arrow {
+              display: none;
+            }
+          }
+        }
+        .df-mega-collapse {
+          .card-body {
+            padding: 0px;
+            background: none;
+            color: white;
+            .df-mega-menu-submenu {
+              padding: 0px 5px;
+              .df-mega-menu-link {
+                border-bottom: 0px;
+                padding: 0px;
+                a {
+                  margin-left: 0px;
+                  color: $grey-text;
+                  font-size: 1rem;
+                  height: 26px;
+                }
+
+                &.white {
+                  a {
+                    color: white;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.tomato-sauces {
+          min-height: 80px;
+        }
+        &.gift-collections {
+          min-height: 120px;
+        }
+
+      }
+
+      // Non-accordion Submenu
+      > .df-mega-menu-submenu {
+        padding: 0px 5px;
+        .df-mega-menu-link {
+          border-bottom: 0px;
+          padding: 0px;
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      // Individual links (no submenu section)
+      .df-mega-menu-link {
+        border-bottom: 0px;
+        padding: 0px;
+        a {
+          font-size: 1rem;
+        }
+      }
+
+      &.account-column {
+        flex-basis: 100%;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    top: 135px;
+    padding: 20px 30px;
+    .df-mega-menu-column {
+      flex: 1 1;
+
+      &.account-column {
+        flex: 1 1;
+        .account {
+          display: block;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}

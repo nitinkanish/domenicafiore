@@ -1,0 +1,73 @@
+.awards-search {
+  padding-top: 11px;
+  padding-bottom: 10px;
+  .awards-search-form {
+    display: flex;
+    justify-content: space-between;
+    background-color: $grey-medium;
+    .form-group {
+      margin-bottom: 0px;
+      flex: 1 1 auto;
+      .form-control {
+        -webkit-appearance: none;
+        font-family: $din-pro-cond;
+        font-size: 1.15rem;
+        letter-spacing: 0.025rem;
+        color: white;
+        text-transform: none;
+        outline: unset;
+        box-shadow: none;
+        border: 0px;
+        background: none;
+        padding: 1px 3px 3px 6px;
+        height: 30px;
+      }
+    }
+    > .search-button {
+      margin: auto 0px;
+      .btn-search-icon {
+        -webkit-appearance: none;
+        background: none;
+        border: 0px;
+        padding: 0px;
+        outline: unset;
+        box-shadow: none;
+        width: 23px;
+        height: 23px;
+        padding: 4px;
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 36px;
+    padding-bottom: 60px;
+    .awards-search-form {
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: 0px;
+      .form-group {
+        .form-control {
+          font-size: 1.75rem;
+          padding: 1px 3px 3px 13px;
+          height: 43px;
+        }
+      }
+      > .search-button {
+        margin-right: 10px;
+        .btn-search-icon {
+          width: 35px;
+          height: 35px;
+          img {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+}

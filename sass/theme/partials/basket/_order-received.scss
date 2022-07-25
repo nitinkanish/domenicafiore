@@ -1,0 +1,163 @@
+.checkout-column {
+  max-width: 800px;
+  flex: 1 1 100%;
+
+  #checkout-accordion-outer {
+    max-width: none;
+    .woocommerce {
+      .woocommerce-order {
+        .woocommerce-notice {
+          font-size: 1.25rem;
+          line-height: 1.25;
+        }
+        // Promo Message
+        .promo-message {
+          background-color: $primary;
+          padding: 10px;
+          margin-bottom: 30px;
+          color: black;
+          a {
+            color: black;
+            text-decoration: underline;
+            &:hover {
+              color: black;
+            }
+          }
+        }
+        // Order Overview
+        .woocommerce-order-overview {
+          padding: 0px;
+          margin-bottom: 30px;
+          li {
+            float: none;
+            margin-bottom: 15px;
+            border: 0px;
+          }
+        }
+        // Order Details
+        .woocommerce-order-details {
+          background-color: $grey-form-container;
+          padding: 20px;
+          h2 {
+            margin-bottom: 10px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+          }
+          .woocommerce-table {
+            thead, tbody, tfoot {
+              th, td {
+                padding-left: 0px;
+                padding-right: 0px;
+              }
+            }
+            thead {
+              .woocommerce-table__product-name {
+                width: 205px;
+              }
+            }
+            tbody {
+              .order_item {
+                .product-name {
+                  .wc-item-meta {
+                    padding-left: 0px;
+                    margin-top: 10px;
+                    li {
+                      .wc-item-meta-label, p {
+                        font-size: 0.875rem;
+                        line-height: 1.3125;
+                      }
+                    }
+                  }
+                }
+
+                &.mnm_table_item {
+                  .product-name {
+                    .mnm_table_item_indent {
+                      padding-left: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        // Customer Details
+        .woocommerce-customer-details {
+          .woocommerce-columns {
+            display: flex;
+            flex-wrap: wrap;
+            .woocommerce-column {
+              flex: 1 1 100%;
+              min-width: 100%;
+              h2 {
+                text-align: left;
+                font-size: 1.15rem;
+                margin-bottom: 10px;
+              }
+              address {
+                font-size: 0.875rem;
+                line-height: 1.5;
+                padding: 0px;
+                .woocommerce-customer-details--phone,
+                .woocommerce-customer-details--email {
+                  font-size: 0.875rem;
+                }
+                .woocommerce-customer-details--phone {
+                  margin-top: 10px;
+                }
+              }
+              &.woocommerce-column--billing-address {
+                margin-bottom: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 auto;
+    h2 {
+      // text-align: center;
+      margin-bottom: 10px;
+    }
+    #checkout-accordion-outer {
+      .woocommerce {
+        .woocommerce-order {
+          .woocommerce-notice {
+            margin-bottom: 20px;
+          }
+          .woocommerce-order-details {
+            h2 {
+              font-size: 1.5rem;
+            }
+          }
+          .woocommerce-order-details {
+            .woocommerce-table {
+              thead {
+                .woocommerce-table__product-name {
+                  width: 300px;
+                }
+              }
+              tbody {
+
+              }
+            }
+          }
+          // Customer Details
+          .woocommerce-customer-details {
+            .woocommerce-columns {
+              flex-wrap: nowrap;
+              .woocommerce-column {
+                flex: 1 1 50%;
+                min-width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

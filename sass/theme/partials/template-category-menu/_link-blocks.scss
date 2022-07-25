@@ -1,0 +1,54 @@
+.link-blocks {
+  text-align: center;
+  .link-panel {
+    padding-top: 10px;
+    margin-bottom: 25px;
+    .panel-content {
+      h2 {
+        margin-bottom: 0px;
+      }
+      p {
+        padding: 0px 20px;
+      }
+    }
+    .link-image {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+    .btn {
+      margin-top: 15px;
+      min-width: 115px;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    padding-top: 70px;
+    padding-bottom: 5px;
+    .link-panel {
+      display: flex;
+      flex-direction: column;
+      margin: 0px auto 75px;
+      .panel-content {
+        order: 2;
+        margin: 0 auto;
+        h2 {
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 0.85rem;
+          width: 80%;
+          margin: 0 auto 30px;
+        }
+      }
+      .link-image {
+        order: 1;
+        margin: 0 auto 50px;
+        width: 70%;
+        max-width: none;
+      }
+      .btn {
+        order: 3;
+        margin: 0 auto;
+      }
+    }
+  }
+}

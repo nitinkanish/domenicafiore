@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12">
+  <defs>
+    <style>
+      .a {
+        fill: #f8f8f8;
+      }
+    </style>
+  </defs>
+  <title>nav-bars</title>
+  <g>
+    <rect class="a" width="17" height="1.6"/>
+    <rect class="a" y="5.2" width="17" height="1.6"/>
+    <rect class="a" y="10.4" width="17" height="1.6"/>
+  </g>
+</svg>

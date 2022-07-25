@@ -1,0 +1,7 @@
+body.single-post,
+body.single-recipes,
+body.single-newsletters {
+  @import "partials/single-post/hero";
+  @import "partials/single-post/content";
+  @import "partials/single-post/related-posts";
+}

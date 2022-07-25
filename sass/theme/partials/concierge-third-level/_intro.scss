@@ -1,0 +1,13 @@
+.intro {
+  max-width: 800px;
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+  @include media-breakpoint-up(sm) {
+    h1 {
+      margin-top: 60px;
+      font-size: 2rem;
+    }
+  }
+}

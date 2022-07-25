@@ -1,0 +1,14 @@
+.copy-block {
+  margin-top: 30px;
+  max-width: 800px;
+  h2 {
+    font-size: 1.25rem;
+  }
+  p {}
+
+  @include media-breakpoint-up(sm) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}

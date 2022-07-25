@@ -1,0 +1,23 @@
+.hero {
+  .hero-image {
+    @include hero-bg-cover;
+    padding-bottom: $hero-aspect-ratio-xs;
+    display: table;
+  }
+
+  @include media-breakpoint-up (sm) {
+    .hero-image {
+      padding-bottom: $hero-aspect-ratio-sm;
+    }
+  }
+  @include media-breakpoint-up (md) {
+    .hero-image {
+      padding-bottom: $hero-aspect-ratio-md;
+    }
+  }
+  @include media-breakpoint-up (lg) {
+    .hero-image {
+      padding-bottom: $hero-aspect-ratio-lg;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+body.page-template-page_home {
+  @import "partials/home/hero";
+  @import "partials/home/featured-products";
+  @import "partials/home/shop-links";
+  @import "partials/home/olive-oil-club";
+  @import "partials/home/news-links";
+
+  .newsletter-signup {
+    border-bottom: 0px;
+  }
+}

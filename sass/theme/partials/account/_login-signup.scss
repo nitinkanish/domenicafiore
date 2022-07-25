@@ -1,0 +1,36 @@
+.login-signup-row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .form-container {
+    background-color: $grey-medium-dark;
+    padding: 15px;
+    margin-bottom: 18px;
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+    .df-form {
+      border: 0px;
+      padding: 0px;
+      margin: 10px 0px 0px;
+      .form-group {}
+      .row {
+
+      }
+      .woocommerce-FormRow {
+        margin: 0px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    text-align: left;
+    max-width: 680px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    > .col-sm-6 {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}

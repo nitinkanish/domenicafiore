@@ -1,0 +1,6 @@
+body.page-template-tpl_product-menu {
+  @import "partials/template-product-menu/hero";
+  @import "partials/template-product-menu/product-list";
+  // Overrides for specific pages
+  @import "partials/template-product-menu/gift-boxes";
+}

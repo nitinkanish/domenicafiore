@@ -1,0 +1,133 @@
+.df-product-add-to-cart-module {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .product-image {
+    position: relative;
+    display: inline-block;
+    img {
+      width: 100%;
+    }
+    // Badges
+    .df-product-badge {
+      position: absolute;
+      bottom: -7px;
+      right: 5px;
+      width: 35px;
+      height: 35px;
+      .df-badge {
+        width: 35px;
+        height: 35px;
+        .shape {
+          fill: $primary;
+        }
+      }
+      .message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        margin: 0 auto;
+        line-height: 1;
+        font-size: 9px;
+      }
+    }
+  }
+  .product-description {
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+  .price-container {
+    margin-top: 12px;
+    position: relative;
+    .price {
+      color: $primary;
+      font-size: 1rem;
+    }
+    .sale-info {
+      // position: absolute;
+      // top: -12px;
+      // left: 50%;
+      width: 100%;
+      // transform: translateX(-50%);
+      margin-bottom: 0px;
+      font-size: 10px;
+      color: $grey-text;
+      .regular-price {
+        text-decoration: line-through;
+      }
+    }
+  }
+  .product-buttons {
+    margin: 0 auto;
+    .btn {
+      width: 100%;
+      max-width: 125px;
+      margin-bottom:  10px;
+    }
+  }
+  .case-discount-notice,
+  .ndn20-discount-notice {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 7px 20px 6px;
+    border: solid 2px #c3d600;
+    font-weight: bold;
+  }
+
+
+  @include media-breakpoint-up(sm) { // .df-product-add-to-cart-module
+    margin: 0px auto;
+    display: block;
+    .product-image {
+      img {
+        max-width: 350px;
+      }
+      // Badges
+      .df-product-badge {
+        width: 60px;
+        height: 60px;
+        bottom: -15px;
+        .df-badge {
+          width: 60px;
+          height: 60px;
+          .shape {
+
+          }
+        }
+        .message {
+          font-size: 1rem;
+        }
+      }
+    }
+    .product-description {
+      margin: 25px auto 5px;
+      max-width: 250px;
+      font-size: 1rem;
+    }
+    .price-container {
+      margin-top: 17px;
+      .price {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      .sale-info {
+        top: -17px;
+        font-size: 13px;
+        .regular-price {
+        }
+      }
+    }
+    .product-buttons {
+      .btn {
+        width: 120px;
+        max-width: none;
+        min-width: auto;
+        padding: 6px 0px;
+        margin: 0px 5px;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,8 @@
+body.page-template-tpl_list-content-type,
+body.blog,
+body.archive {
+  @import "partials/template-list-content-type/hero";
+  @import "partials/template-list-content-type/category-filter-buttons";
+  @import "partials/template-list-content-type/posts-list";
+  @import "partials/template-list-content-type/no-posts-found";
+}

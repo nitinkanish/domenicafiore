@@ -1,0 +1,195 @@
+.awards-list-container {
+  padding-bottom: 30px;
+
+  // Award Years Accordion
+  #award-years-accordion {
+    > .card {
+      border: 0px !important;
+      > .card-header {
+        border: 0px !important;
+        .btn-accordion {
+          padding-left: 0px;
+          padding-right: 0px;
+          height: 50px;
+          .text {
+            color: $grey-text;
+            font-size: 1.15rem;
+          }
+        }
+      }
+      > .df-accordion-collapse {
+        &.first {
+          display: block;
+        }
+
+        .card-body {
+          padding: 0px;
+
+          // Award Shows Accordion
+          .award-shows-accordion {
+            > .card {
+              border: 0px;
+              &:last-child {
+                border-bottom: 0px;
+              }
+              > .card-header {
+                border: 0px;
+                .btn-accordion {
+                  padding-left: 0px;
+                  padding-right: 0px;
+                  padding-bottom: 20px;
+                  height: auto;
+                  .text {
+                    color: white;
+                    .award-show-name {
+                      font-size: 1.15rem;
+                      white-space: initial;
+                    }
+                    .awards-total {
+                      display: block;
+                      font-size: 0.6125rem;
+                      margin-top: 7px;
+                    }
+                  }
+                }
+                .btn-accordion[aria-expanded="true"] {
+                  .text {
+                    .awards-total {
+                      display: none;
+                    }
+                  }
+                }
+              }
+              > .df-accordion-collapse {
+                .card-body {
+                  padding-bottom: 30px;
+                  // Award Badges
+                  .award-images {
+                    background-color: $grey-form-container;
+                    margin-bottom: 15px;
+                    padding: 20px 30px;
+                    text-align: center;
+                    img {
+                      height: 70px;
+                    }
+                  }
+                  // Awards List
+                  .awards-list {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    background-color: $grey-form-container;
+                    padding: 20px 30px;
+                    .award {
+                      display: flex;
+                      justify-content: space-between;
+                      margin-bottom: 15px;
+                      .olio-name {
+                        font-size: 0.875rem;
+                        flex: 0 0 130px;
+                        margin: 0px 0px auto 0px;
+                      }
+                      .award-name {
+                        margin: 0px 0px auto 0px;
+                        font-size: 0.875rem;
+                        text-align: left;
+                        margin: 0 auto 0 0;
+                      }
+                    }
+                  }
+                  .award-show-description {
+                    margin-top: 20px;
+                    font-size: 0.875rem;
+                    line-height: 1.5;
+                    span {
+                      font-weight: 200 !important;
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 75px;
+    #award-years-accordion {
+      > .card {
+        > .card-header {
+          .btn-accordion {
+            height: 60px;
+            max-width: 770px;
+            .text {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        > .df-accordion-collapse {
+          .card-body {
+            padding: 0px;
+            max-width: 770px;
+            // Award Shows Accordion
+            .award-shows-accordion {
+              > .card {
+                > .card-header {
+                  .btn-accordion {
+                    max-width: 700px;
+                    .text {
+                      .award-show-name {
+                        // font-size: 1.5rem;
+                      }
+                    }
+                  }
+                }
+                > .df-accordion-collapse {
+                  .card-body {
+                    max-width: 630px;
+                    // Award Badges
+                    .award-images {
+                      text-align: left;
+                      img {
+                        height: 100px;
+                      }
+                    }
+                    // Awards List
+                    .awards-list {
+                      padding: 30px 50px;
+                      .award {
+                        &:last-child {
+                          margin-bottom: 0px;
+                        }
+                        .olio-name {
+                          font-size: 1rem;
+                          flex: 0 0 160px;
+                          margin: 0px;
+                        }
+                        .award-name {
+                          font-size: 1rem;
+                          text-align: left;
+                          margin: 0 auto 0 0;
+                        }
+                      }
+                    }
+                    .award-show-description {
+                      margin-top: 30px;
+                      font-size: 1rem;
+                      line-height: 1.5;
+                      span {
+                        font-weight: 200 !important;
+                      }
+                    }
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Dropdown",
+  "flags_dir" : "flags",
+  "for"  : [ "shortcode_actions" ],
+  "settings": {
+    "display_link_for_current_lang": 1
+  }
+}

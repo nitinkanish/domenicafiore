@@ -1,0 +1,37 @@
+.hero {
+  .hero-image {
+    @include hero-bg-cover;
+    padding-bottom: $hero-aspect-ratio-xs;
+    display: table;
+  }
+
+  @include media-breakpoint-up (sm) {
+    .hero-image {
+      padding-bottom: $hero-aspect-ratio-sm;
+    }
+  }
+  @include media-breakpoint-up (md) {
+    .hero-image {
+      padding-bottom: $hero-aspect-ratio-md;
+    }
+  }
+  @include media-breakpoint-up (lg) {
+    .hero-image {
+      padding-bottom: $hero-aspect-ratio-lg;
+    }
+  }
+}
+
+.intro-text-container {
+  margin-bottom: 30px;
+  .intro-text {
+    text-align: center;
+    margin: 30px auto;
+  }
+  @include media-breakpoint-up(sm) {
+    .intro-text {
+      margin: 50px auto;
+      max-width: 700px;
+    }
+  }
+}

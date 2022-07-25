@@ -1,0 +1,187 @@
+.oils-container {
+  .oils-column {
+
+    .oils-table {
+      margin: auto;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+      .oils-table-row {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        &.bottle-image-row {
+          .bottle-image {
+            img {}
+            h2 {
+              font-size: 0.75rem;
+              margin-top: 10px;
+              margin-bottom: 0px;
+              letter-spacing: 0.1rem;
+            }
+          }
+        }
+        &.mobile-header-row {
+          h3 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            color: $primary;
+            letter-spacing: 0.05rem;
+          }
+        }
+        &.comparison {
+          position: relative;
+          .oils-table-cell {
+            padding-top: 30px;
+            h3 {
+              font-size: 0.75rem;
+              color: $primary;
+            }
+            p {
+              font-size: 0.5rem;
+              margin-bottom: 0px;
+            }
+          }
+        }
+        &.product-add-row {
+          .product-add {
+            padding-top: 10px;
+            .name {
+              margin-bottom: 0px;
+            }
+            .size {
+              font-size: 7px;
+              margin-bottom: 7px;
+            }
+            .quantity.buttons_added {
+              input[type="button"] {
+                &.minus {}
+                &.plus {}
+              }
+              input[type="text"] {
+                width: 18px;
+                height: 18px;
+                margin: auto 3px;
+              }
+            }
+            .price {
+              margin-top: 10px;
+              color: $primary;
+                  margin-bottom: 7px;
+            }
+            .buttons {
+              .btn {
+                font-size: .5rem;
+                min-width: auto;
+                padding: 2px;
+                letter-spacing: 0;
+                width: 100%;
+                margin-bottom: 10px;
+                line-height: 1.5;
+              }
+              .tinvwl_add_to_wishlist_button {
+                font-size: 0.875rem;
+              }
+            }
+          }
+        }
+
+        .oils-table-cell {
+          padding: 0.5rem;
+          width: 25%;
+          flex: 0 0 25%;
+          h3 {
+            letter-spacing: 0.1rem;
+          }
+        }
+      }
+    }
+
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 40px;
+    .oils-column {
+      .oils-table {
+        .oils-table-row {
+          &.bottle-image-row {
+            .bottle-image {
+              padding-bottom: 25px;
+              h2 {
+                font-size: 1.15rem;
+                margin: 30px auto 0px;
+                max-width: 105px;
+              }
+            }
+          }
+          &.comparison {
+            .oils-table-cell {
+              padding-top: 5px;
+              h3 {
+                font-size: 1rem;
+              }
+              p {
+                font-size: .75rem;
+                margin-bottom: 0;
+                line-height: 1.45;
+              }
+            }
+          }
+          &.product-add-row {
+            .product-add {
+              .name {
+              }
+              .size {
+                font-size: 0.75rem;
+                margin-bottom: 15px;
+              }
+              .quantity.buttons_added {
+                input[type="button"] {}
+                input[type="text"] {
+                  width: 30px;
+                  height: 30px;
+                  margin: auto 10px;
+                }
+              }
+              .price {
+                font-size: 1.25rem;
+                margin-top: 20px;
+                margin-bottom: 16px;
+              }
+              .buttons {
+                .btn {
+                  font-size: 1.15rem;
+                  min-width: 120px;
+                }
+                .tinvwl_add_to_wishlist_button {
+                  font-size: 0.875rem;
+                }
+              }
+            }
+          }
+
+          .oils-table-cell {
+
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .oils-column {
+      .oils-table {
+        .oils-table-row {
+          .oils-table-cell {
+            width: 14%;
+            flex: 0 0 14%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.intro {
+  text-align: center;
+  padding: 10px 15px 20px;
+  h1 {}
+  .intro-copy {
+    max-width: 225px;
+    margin: 10px auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .intro-copy {
+      font-size: 1.25rem;
+      max-width: 575px;
+      margin: 25px auto;
+    }
+  }
+}

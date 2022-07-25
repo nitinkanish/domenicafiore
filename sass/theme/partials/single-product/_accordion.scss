@@ -1,0 +1,22 @@
+.accordion-content {
+  padding: 0px 0px 40px 0px;
+  #product_accordion {
+    .certifications {
+      .certifications-container {
+        .certifications-row {
+          display: flex;
+          margin-bottom: 10px;
+          .logo {
+            width: 100px;
+          }
+          .description {
+            margin: auto;
+            p {
+              margin: auto 0 auto 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

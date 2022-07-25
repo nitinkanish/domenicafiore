@@ -1,0 +1,151 @@
+.newsletter-signup {
+  @include bg-shells;
+  text-align: center;
+  border-bottom: solid 6px $primary;
+  padding: 35px 0px;
+  overflow: hidden;
+  .newsletter-signup-container {
+    p {
+      font-size: 0.75rem;
+      margin-bottom: 8px;
+      &.fine-print {
+        color: $grey-text;
+        a {
+          color: $grey-text;
+          text-decoration: underline;
+        }
+      }
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 0 auto 10px;
+    }
+    .newsletter-signup-form, .mc4wp-form {
+      padding: 0px 30px;
+      .field-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        input {
+          width: 100%;
+          font-family: $din-pro-cond;
+          background-color: black;
+          box-shadow: none;
+          border: solid 1px $grey-text;
+          padding: 3px 0px 4px 10px;
+          line-height: 1rem;
+          margin-bottom: 15px;
+          color: $grey-text;
+        }
+        .submit-button-container {
+          width: 100%;
+          .newsletter-signup-submit {
+            // min-width: auto;
+            // padding: 3px 15px;
+            // font-size: 1.15rem;
+          }
+        }
+      }
+
+      // Custom Checkbox
+      .checkbox-container {
+        .custom-checkbox {
+          margin-right: 5px;
+          margin-bottom: 0px;
+          .custom-control-input:checked~.custom-control-indicator {
+            &::before {
+              background-image: url('../img/icon-form-check.svg');
+              background-size: 70%;
+              background-position: -1px 3px;
+              outline: none;
+            }
+          }
+          .custom-control-indicator {
+            background-color: black;
+            border: solid 1px $grey-text;
+            top: -1px;
+            outline: none;
+          }
+        }
+      }
+
+      .mc4wp-response {
+        .mc4wp-alert {
+          p {
+            font-size: 0.875rem;
+          }
+          &.mc4wp-success {
+            p {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  @include media-breakpoint-up(sm) {
+    border-bottom: solid 12px $primary;
+    padding: 78px 0 67px 0;
+    .newsletter-signup-container {
+      max-width: 465px;
+      margin: 0 auto;
+      p {
+        margin-bottom: 0px;
+        margin-right: 0px;
+        font-size: 1rem;
+      }
+      h3 {
+        font-size: 2rem;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        line-height: 1.45;
+      }
+      .newsletter-signup-form, .mc4wp-form {
+        .field-group {
+          justify-content: space-between;
+          input {
+            font-size: 1.25rem;
+            padding: 0px 0 5px 10px;;
+          }
+          .submit-button-container {
+            // width: auto;
+            // text-align: left;
+            .newsletter-signup-submit {
+              margin-top: 10px;
+              // padding: 3px 13px;
+              // font-size: 0.875rem;
+            }
+          }
+          .fine-print {
+            margin-top: auto;
+            margin-right: auto;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            font-size: 0.875rem;
+          }
+        }
+
+        // Custom Checkbox
+        .checkbox-container {
+          .custom-checkbox {
+            .custom-control-input:checked~.custom-control-indicator {
+              &::before {
+                background-size: 65%;
+                background-position: center center;
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .custom-control-indicator {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

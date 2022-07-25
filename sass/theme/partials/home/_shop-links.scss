@@ -1,0 +1,34 @@
+.shop-links {
+  text-align: center;
+  padding-top: 60px;
+  h2 {
+    margin-bottom: 15px;
+  }
+  .shop-link-group {
+    margin-bottom: 40px;
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+    p {
+      margin-top: 7px;
+    }
+    .btn {
+      min-width: auto;
+      padding: 3px 20px 2px;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    .shop-link-group {
+      p {
+        max-width: 205px;
+        margin: 7px auto 1rem;
+      }
+      .btn {
+        min-width: 110px;
+        padding: 0.35rem 1.25rem;
+        margin-top: 10px;
+      }
+    }
+  }
+}

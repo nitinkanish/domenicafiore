@@ -1,0 +1,198 @@
+.sign-in {
+  text-align: center;
+  .sign-in-intro {
+    p {
+      font-weight: bold;
+      max-width: 410px;
+      margin: 0 auto;
+    }
+  }
+  .login-signup-row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .form-container {
+      background-color: $grey-medium-dark;
+      padding: 15px;
+      margin-bottom: 18px;
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 3px;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+      max-width: 680px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+      > .col-sm-6 {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+  }
+}
+
+.oil-selection {
+  text-align: center;
+  margin-top: 50px;
+}
+.df-mnm-product-container {
+  padding: 0px 0px 50px 0px;
+  text-align: center;
+  .summary {
+    .mnm_form {
+      .products {
+        padding: 0px 15px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        max-width: 410px;
+        justify-content: center;
+        .mnm_item {
+          display: flex;
+          flex-direction: column;
+          max-width: 50%;
+          margin: 0 auto;
+          margin-bottom: 40px;
+          flex: 0 0 50%;
+          div {
+            margin: 0 auto;
+          }
+          .product-thumbnail {
+            .mnm_image {
+              max-width: 60%;
+              width: auto;
+              padding: 0px;
+              img {
+                margin-bottom: 0px;
+              }
+            }
+          }
+          .product-details {
+            margin-bottom: 0px;
+            a {
+              margin-top: 15px;
+              color: white;
+              font-size: 1.25rem;
+              transition: color 0.25s;
+              &:hover {
+                color: $primary;
+                text-decoration: none;
+              }
+            }
+            .mnm-item-data {}
+          }
+          .product-quantity {
+            margin-top: 10px;
+            .quantity {
+              display: flex;
+              justify-content: center;
+              input {
+                margin: 0 5px;
+              }
+              input[type=text] {
+                padding-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+
+      .mnm_reset {
+        display: none !important;
+      }
+
+      .mnm_cart {
+        .mnm_button_wrap {
+          display: flex !important;
+          flex-wrap: wrap;
+          justify-content: center;
+          .mnm_price {
+            order: 2;
+            display: block !important;
+            height: 39px !important;
+            margin: auto 20px !important;
+            .sale-info {
+              color: $grey-text;
+              text-decoration: line-through;
+              margin-bottom: 5px;
+              line-height: 1;
+              text-align: left;
+              font-size: 1rem;
+            }
+            .price {
+              line-height: 1;
+              font-size: 1.25rem;
+              color: $primary;
+            }
+          }
+          .mnm_message {
+            order: 1;
+            flex: 1 1 100%;
+            margin-bottom: 30px;
+            .woocommerce-info {
+              background: $grey-medium;
+              border: 0px;
+              padding: .75em 2em .75em 2em;
+              &::before {
+                content: '';
+                display: none;
+              }
+              .mnm_message_content {
+                border: 0px;
+                padding: .75em 2em .75em 2em;
+                &::before {
+                  content: '';
+                }
+                li {
+                  color: white;
+                  // font-size: 1.25rem;
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+          .mnm_add_to_cart_button {
+            order: 3;
+            margin-top: 15px;
+            @include media-breakpoint-up(sm) {
+              margin-top: 0px;
+            }
+          }
+          .quantity {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .summary {
+      .mnm_form {
+        .products {
+          max-width: 570px;
+          .mnm_item {
+            flex: 0 1 30%;
+            max-width: none;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .summary {
+      .mnm_form {
+        .products {
+          max-width: 840px;
+          flex-wrap: nowrap;
+          .mnm_item {
+
+          }
+        }
+      }
+    }
+  }
+}

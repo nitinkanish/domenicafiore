@@ -1,0 +1,79 @@
+.faq {
+  padding-left: 0px;
+  padding-right: 0px;
+  h3 {
+    margin-left: 15px;
+  }
+  .df-accordion {
+    .card {
+      .card-header {
+        h5 {
+          button {
+            padding-left: 10px;
+          }
+        }
+      }
+      .df-accordion-collapse {
+        .card-body {
+          .question-answer-container {
+            p {
+              &.question {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+      &:last-child {
+        border-bottom: 0px;
+        .card-header {
+
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 50px;
+    h3 {
+      max-width: map-get($container-max-widths, sm);
+      margin: 0 auto;
+      padding-left: 15px;
+      margin-bottom: 15px;
+    }
+    .df-accordion {
+      .card {
+        .card-header {
+          h5 {
+            button {
+              padding-top: 23px;
+              padding-bottom: 23px;
+              padding-left: 15px;
+              height: 65px;
+              .collapse-arrow {
+                img {
+                  width: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    h3 {
+      max-width: map-get($container-max-widths, md);
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    h3 {
+      max-width: map-get($container-max-widths, lg);
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    h3 {
+      max-width: map-get($container-max-widths, xl);
+    }
+  }
+}

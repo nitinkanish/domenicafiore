@@ -1,0 +1,12 @@
+.rich-text-row {
+  text-align: center;
+  p {
+    font-size: 1rem;
+    strong {
+      font-weight: bold;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 30px;
+  }
+}

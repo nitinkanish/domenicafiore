@@ -1,0 +1,187 @@
+body.page-template-page_basket {
+  .cart-column .woocommerce {
+    .cart-empty {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1rem;
+    }
+    .return-to-shop {
+      text-align: center;
+      margin-bottom: 50px;
+      .btn {}
+    }
+
+    .df-cart-container {
+      padding-top: 20px;
+      .cart-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+        h3 {
+          font-size: 1rem;
+        }
+      }
+
+      .woocommerce-cart-form {
+        .df-cart-product-row {
+          display: flex;
+          justify-content: flex-start;
+          margin-bottom: 50px;
+          &:last-child {
+            margin-bottom: 0px
+          }
+
+          .df-delete-product {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 0 0 10%;
+            a.remove {
+              color: $grey-text !important;
+              &:hover {
+                color: red !important;
+                background: none !important;
+              }
+            }
+          }
+          .df-product-image {
+            flex: 0 0 115px;
+            img {
+              max-width: 115px;
+            }
+          }
+          .df-product-quantity {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .df-cart-quantity-interface {
+              flex-direction: column-reverse;
+              .df-quantity-button {
+                margin: 4px auto;
+                .cart-qty-icon {
+                  .minus, .plus {
+                    display: none;
+                  }
+                  .down, .up {
+                    display: inline !important;
+                  }
+                }
+
+                &.less {
+
+                }
+                &.more {
+                  margin: 4px auto 1px;
+                }
+              }
+              .df-quantity-display {}
+            }
+          }
+          .df-product-summary {
+            font-size: 0.6125rem;
+            line-height: 1.8;
+            margin: auto 0px;
+            padding-left: 25px;
+            .name {
+              a {
+                color: white;
+              }
+              .variation {
+                .variation-Available {
+                  display: none;
+                }
+              }
+            }
+            .size {}
+            .price {}
+            .subtotal {
+              color: $primary;
+              font-size: 0.875rem;
+              line-height: 1.45;
+              white-space: nowrap;
+              del {
+                color: $grey-text;
+              }
+              ins {
+                text-decoration: none;
+              }
+            }
+            .case-discount-notice,
+            .ndn20-discount-notice {
+              line-height: 1.25;
+              margin-top: 8px;
+              font-size: 11px;
+              border: solid 1px $primary;
+              color: white;
+              padding: 5px 5px 2px;
+              font-weight: bold;
+            }
+          }
+        }
+
+        // Cart Actions Row
+        .df-cart-actions-row {
+          margin-top: -15px;
+
+          .button-group {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            #update-cart-button {
+              background-color: $primary;
+              transition: all 0.1s;
+              margin-right: 10px;
+              padding: 6px 8px;
+              &:disabled {
+                background-color: $grey-medium;
+                opacity: 0.5;
+              }
+            }
+            .keep-shopping-button {
+              padding: 6px 8px;
+            }
+          }
+
+          .coupon {
+            display: flex;
+            padding: 20px 10px;
+            background: $grey-form-container;
+            justify-content: space-between;
+            .input-text {
+              flex: 0 1 55%;
+              max-width: 55%;
+            }
+            .btn {
+              flex: 0 1 40%;
+              max-width: 40%;
+              padding: 6px 0px;
+            }
+          }
+        }
+      }
+    }
+
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 100px;
+      .cart-empty {
+        margin-top: 100px;
+        font-size: 1.5rem;
+      }
+      .return-to-shop {
+        text-align: center;
+        margin-bottom: 100px;
+        .btn {}
+      }
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+
+  &.woocommerce-order-received {
+    .cart-column .woocommerce {
+      display: none;
+    }
+  }
+}

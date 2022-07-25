@@ -1,0 +1,16 @@
+<div class="{{ css_classes }}" >
+	<ul class="dropdown">
+		<li class="wcml-cs-active-currency btn-group" >
+			<a class="wcml-cs-item-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ get_formatted_price( selected_currency, format )|raw }}</a>
+			<ul class="wcml-cs-submenu dropdown-menu">
+				{% for currency in currencies %}
+					{% if currency != selected_currency %}
+						<li class="dropdown-item">
+							<a rel="{{ currency }}">{{ get_formatted_price( currency, format )|raw }}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</li>
+	</ul>
+</div>

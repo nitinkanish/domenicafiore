@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="40" viewBox="0 0 72 40">
+  <defs>
+    <style>
+      .a {
+        fill: #7f0308;
+      }
+    </style>
+  </defs>
+  <title>concierge-bell</title>
+  <path class="a" d="M65.6,36A29.74,29.74,0,0,0,37.88,6.57a2.88,2.88,0,1,0-3.77,0A29.76,29.76,0,0,0,6.39,36H1v2.5H71V36Z"/>
+</svg>

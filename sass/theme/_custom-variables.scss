@@ -1,0 +1,128 @@
+$grey-text:             #808284;
+$grey-light:            #939597;
+$grey-medium:           #4c4c4e;
+$grey-medium-dark:      #323132;
+$grey-form-container:   #282829;
+$grey-dark:             #1c1c1c;
+$grey-very-dark:        #191919;
+
+$green-dark:            #95a12b;
+$concierge-red:         #7f0308;
+
+// Oil Label Colours
+$oil-monaco:            #c18e0d;
+
+// Buttons
+button {
+  cursor: pointer;
+}
+.btn,
+.woocommerce button.button,
+.woocommerce-button {
+  font-family: $din-pro-cond;
+  background: none;
+  text-transform: uppercase;
+  border: 0px;
+  padding: .25rem 20px;
+  min-width: 110px;
+  border-radius: 0px;
+  &:focus {
+    border: 0px;
+    outline: none;
+    box-shadow: none;
+  }
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.15rem;
+    padding: 6px 20px;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    // min-width: 160px;
+  }
+}
+
+
+.btn-green,
+.woocommerce button.button {
+  color: white;
+  background-color: $primary;
+  border-color: $primary;
+  letter-spacing: 0.05rem;
+  &:hover {
+    color: white;
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+}
+
+.btn-grey,
+.woocommerce button.button.alt {
+  color: white;
+  background-color: $grey-medium;
+  border-color: $grey-medium;
+  letter-spacing: 0.05rem;
+  &:hover {
+    color: white;
+    background-color: lighten($grey-medium, 10%);
+    border-color: lighten($grey-medium, 10%);
+  }
+}
+
+.woocommerce-button {
+  min-width: auto;
+  border-radius: 0px !important;
+  color: white !important;
+  background-color: $grey-medium !important;
+  border-color: $grey-medium !important;
+}
+
+.btn-black {
+  color: white;
+  background-color: black;
+  border: solid 1px white;
+  letter-spacing: 0.05rem;
+  &:hover {
+    color: white;
+    background-color: lighten(black, 10%);
+    border-color: white;
+  }
+}
+
+.btn-hero {
+  min-width: auto;
+  padding: 3px 20px 2px;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 2.5rem;
+    padding: 0px 40px 0px;
+    line-height: 1.75;
+  }
+}
+
+.tinv-wraper {
+  width: 100%;
+  .tinvwl_add_to_wishlist_button {
+    padding: 0px;
+    font-family: inherit;
+    text-transform: none;
+    font-size: 1rem;
+    width: 100%;
+    .tinvwl_add_to_wishlist-text {
+      color: white;
+    }
+    &:hover {
+      .tinvwl_add_to_wishlist-text {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+
+// Hero Image Sizing
+$hero-aspect-ratio-xs: 55%;
+$hero-aspect-ratio-sm: 43%;
+$hero-aspect-ratio-md: 40%;
+$hero-aspect-ratio-lg: 38%;

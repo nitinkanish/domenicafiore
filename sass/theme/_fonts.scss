@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Calvert';
+    src: url('../fonts/CalvertMT-Bold.eot');
+    src: url('../fonts/CalvertMT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CalvertMT-Bold.woff2') format('woff2'),
+        url('../fonts/CalvertMT-Bold.woff') format('woff'),
+        url('../fonts/CalvertMT-Bold.ttf') format('truetype'),
+        url('../fonts/CalvertMT-Bold.svg#CalvertMT-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calvert';
+    src: url('../fonts/CalvertMT.eot');
+    src: url('../fonts/CalvertMT.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CalvertMT.woff2') format('woff2'),
+        url('../fonts/CalvertMT.woff') format('woff'),
+        url('../fonts/CalvertMT.ttf') format('truetype'),
+        url('../fonts/CalvertMT.svg#CalvertMT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calvert';
+    src: url('../fonts/CalvertMT-Light.eot');
+    src: url('../fonts/CalvertMT-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CalvertMT-Light.woff2') format('woff2'),
+        url('../fonts/CalvertMT-Light.woff') format('woff'),
+        url('../fonts/CalvertMT-Light.ttf') format('truetype'),
+        url('../fonts/CalvertMT-Light.svg#CalvertMT-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINPro-Cond';
+    src: url('../fonts/DINPro-Cond.eot');
+    src: url('../fonts/DINPro-Cond.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Cond.woff2') format('woff2'),
+        url('../fonts/DINPro-Cond.woff') format('woff'),
+        url('../fonts/DINPro-Cond.ttf') format('truetype'),
+        url('../fonts/DINPro-Cond.svg#DINPro-Cond') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AW Conqueror Inline';
+    src: url('../fonts/AWConquerorInline-Regular.eot');
+    src: url('../fonts/AWConquerorInline-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AWConquerorInline-Regular.woff2') format('woff2'),
+        url('../fonts/AWConquerorInline-Regular.woff') format('woff'),
+        url('../fonts/AWConquerorInline-Regular.ttf') format('truetype'),
+        url('../fonts/AWConquerorInline-Regular.svg#AWConquerorInline-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$conqueror: 'AW Conqueror Inline';
+$din-pro-cond: 'DINPro-Cond';
+
+$font-family-serif: 'Calvert', Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
+$font-family-base: $font-family-serif;

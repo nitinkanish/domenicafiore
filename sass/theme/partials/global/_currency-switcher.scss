@@ -1,0 +1,23 @@
+// Currency Switcher
+.wcml_currency_switcher {
+  ul {
+    li {
+      background-color: black;
+      a {
+        cursor: pointer;
+        &:after {
+
+        }
+      }
+      ul.wcml-cs-submenu {
+        li {
+          a {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &.wcml-cs-active-currency {}
+    }
+  }
+}

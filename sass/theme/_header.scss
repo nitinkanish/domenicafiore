@@ -1,0 +1,28 @@
+#page header {
+  .currency-language {
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    display: flex;
+    justify-content: space-between;
+    .currency-switcher-widget {
+      img {
+        display: none !important;
+      }
+    }
+    .language-select {
+      .dropdown-menu {
+        .language-flag {
+          img {
+            width: 18px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    position: relative;
+  }
+}

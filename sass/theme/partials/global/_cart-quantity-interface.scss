@@ -1,0 +1,99 @@
+.quantity.buttons_added {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  input[type="button"] {
+    position: relative;
+    -webkit-appearance: none;
+    background: none !important;
+    padding: 0px;
+    margin: auto 0px;
+    width: 20px;
+    height: 20px;
+    border: 0px;
+    color: white;
+    transition: color 0.25s;
+    font-size: 1.5rem;
+    cursor: pointer;
+    &.minus {
+
+    }
+    &.plus {
+
+    }
+
+    &:hover {
+      color: $primary;
+      background: none !important;
+    }
+  }
+
+  input.qty.text {
+    background-color: $primary;
+    width: 24px;
+    height: 24px;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto 10px;
+    display: flex;
+    overflow: hidden;
+    color: white;
+    font-size: 0.875rem;
+    border: 0px;
+  }
+
+}
+
+.df-cart-quantity-interface {
+  display: flex;
+  justify-content: center;
+  .df-quantity-button {
+    -webkit-appearance: none;
+    background: none;
+    width: 16px;
+    height: 16px;
+    padding: 0px;
+    margin: auto 0px;
+    border: 0px;
+    .cart-qty-icon {
+      rect, polygon {
+        fill: white;
+        transition: fill 0.25s;
+      }
+    }
+    &.less {}
+    &.more {}
+    &:hover {
+      cursor: pointer;
+      .cart-qty-icon {
+        rect, polygon {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .df-quantity-display {
+    background-color: $primary;
+    width: 24px;
+    height: 24px;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto 10px;
+    display: flex;
+    overflow: hidden;
+    .df-quantity {
+      font-size: 0.75rem;
+      -webkit-appearance: none;
+      background: none;
+      color: white;
+      border: 0px;
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      min-width: auto;
+      padding: 8px 0px 5px;
+      text-align: center;
+      margin: 0px;
+    }
+  }
+}

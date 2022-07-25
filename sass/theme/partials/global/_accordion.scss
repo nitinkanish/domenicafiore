@@ -1,0 +1,134 @@
+.df-accordion {
+  .card {
+    background-color: black;
+    border: 0px;
+    .card-header {
+      padding: 0px 5px;
+      border-top: solid 1px darken($grey-text, 30%);
+      .btn-accordion {
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        color: white;
+        font-family: $font-family-base;
+        font-size: 0.8rem;
+        font-weight: 300;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        .text {
+          transition: color 0.25s;
+        }
+        .collapse-arrow {
+          img {
+            transform: rotate(0deg);
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .text {
+            color: $primary;
+          }
+        }
+      }
+      .btn-accordion[aria-expanded="true"] {
+        .collapse-arrow {
+          img {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    .df-accordion-collapse {
+      .card-body {}
+    }
+
+    &:first-child {
+      .card-header {
+        border-top: 0px;
+      }
+    }
+    &:last-child {
+      border-bottom: solid 1px darken($grey-text, 30%);
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .card {
+      .card-header {
+        .btn-accordion {
+          max-width: map-get($container-max-widths, sm);
+          margin: 0 auto;
+          padding-top: 9px;
+          padding-bottom: 9px;
+          height: 40px;
+          .text {
+            font-size: 1.1rem;
+          }
+          .collapse-arrow {
+            img {}
+          }
+        }
+      }
+      .df-accordion-collapse {
+        .card-body {
+          max-width: map-get($container-max-widths, sm);
+          margin: 0 auto;
+          padding: 50px;
+          p {
+            font-size: 0.875rem;
+            line-height: 2;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .card {
+      .card-header {
+        .btn-accordion {
+          max-width: map-get($container-max-widths, md);
+        }
+      }
+      .df-accordion-collapse {
+        .card-body {
+          max-width: map-get($container-max-widths, md);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .card {
+      .card-header {
+        .btn-accordion {
+          max-width: map-get($container-max-widths, lg);
+        }
+      }
+      .df-accordion-collapse {
+        .card-body {
+          max-width: map-get($container-max-widths, lg);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    .card {
+      .card-header {
+        .btn-accordion {
+          max-width: map-get($container-max-widths, xl);
+        }
+      }
+      .df-accordion-collapse {
+        .card-body {
+          max-width: map-get($container-max-widths, sm);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

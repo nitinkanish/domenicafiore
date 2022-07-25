@@ -1,0 +1,15 @@
+.hero {
+  .hero-image {
+    @include hero-bg-cover;
+    text-align: center;
+    padding-bottom: 45%;
+    .image-container {}
+    .text-container {
+      width: 75%;
+      h1 {}
+    }
+  }
+  .intro-text-container {
+    @include bg-shells;
+  }
+}
