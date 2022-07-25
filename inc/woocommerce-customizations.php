@@ -54,7 +54,6 @@
   // WooCommerce Customize Checkout Fields
   add_filter( 'woocommerce_checkout_fields' , 'custom_rename_wc_checkout_fields' );
   function custom_rename_wc_checkout_fields( $fields ) {
-    // Billing fields
     $fields['billing']['billing_first_name']['placeholder'] = esc_html__( 'First Name*', 'domenicafiore' );
     $fields['billing']['billing_last_name']['placeholder'] = esc_html__( 'Last Name*', 'domenicafiore' );
     $fields['billing']['billing_company']['placeholder'] = esc_html__( 'Company', 'domenicafiore' );
@@ -63,7 +62,6 @@
     $fields['billing']['billing_phone']['placeholder'] = esc_html__( 'Phone*', 'domenicafiore' );
     $fields['billing']['billing_email']['placeholder'] = esc_html__( 'Email*', 'domenicafiore' );
 
-    // Shipping fields
     $fields['shipping']['shipping_first_name']['placeholder'] = esc_html__( 'First Name*', 'domenicafiore' );
     $fields['shipping']['shipping_last_name']['placeholder'] = esc_html__( 'Last Name*', 'domenicafiore' );
     $fields['shipping']['shipping_company']['placeholder'] = esc_html__( 'Company', 'domenicafiore' );
@@ -71,19 +69,6 @@
     $fields['shipping']['shipping_postcode']['placeholder'] = esc_html__( 'Zip / Postal Code*', 'domenicafiore' );
     $fields['shipping']['shipping_phone']['placeholder'] = esc_html__( 'Phone*', 'domenicafiore' );
     $fields['shipping']['shipping_email']['placeholder'] = esc_html__( 'Email*', 'domenicafiore' );
-
-    // Required fields
-    $fields['billing']['billing_first_name']['required'] = true;
-    $fields['billing']['billing_last_name']['required'] = true;
-    $fields['billing']['billing_city']['required'] = true;
-    $fields['billing']['billing_phone']['required'] = true;
-    $fields['billing']['billing_email']['required'] = true;
-    $fields['shipping']['shipping_first_name']['required'] = true;
-    $fields['shipping']['shipping_last_name']['required'] = true;
-    $fields['shipping']['shipping_city']['required'] = true;
-    $fields['shipping']['shipping_postcode']['required'] = true;
-    $fields['shipping']['shipping_phone']['required'] = true;
-    $fields['shipping']['shipping_email']['required'] = true;
 
     return $fields;
   }
@@ -127,12 +112,12 @@
   		"shipping_company",
   		"shipping_address_1",
   		"shipping_address_2",
+      "shipping_email",
       "shipping_city",
       "shipping_state",
   		"shipping_postcode",
   		"shipping_country",
-  		"shipping_phone",
-      "shipping_email"
+  		"shipping_phone"
   	);
   	foreach($shipping_order as $shipping_field) {
   	    $shipping_fields[$shipping_field] = $fields["shipping"][$shipping_field];
@@ -717,7 +702,7 @@
   	return $url;
   }
 
-// Refer a friend
+// Refer a friend 
   //
 
 function gens_raf_customer_email( $order, $sent_to_admin, $plain_text ) {
@@ -730,7 +715,7 @@ function gens_raf_customer_email( $order, $sent_to_admin, $plain_text ) {
 	    echo '<p style="text-align:left;margin-top:10px;">Share it with your friends:</p>';
 	    echo '<p style="text-align:left;margin-top:10px;">Share on <a href="http://www.facebook.com/share.php?u='.get_home_url() .'?raf='. $code .'">Facebook.</a> Share on <a href="https://twitter.com/intent/tweet?url='.get_home_url() .'?raf='. $code .'">Twitter.</a>. </p>';
         }
-    }
+    }    
 }
 add_action('woocommerce_email_customer_details', 'gens_raf_customer_email', 30, 3 );
 
@@ -740,74 +725,5 @@ function show_referral_link(){
 	echo do_shortcode('[WOO_GENS_RAF_ADVANCE guest_text="You must be logged in."]');
 }
 add_action('woocommerce_thankyou','show_referral_link');
-
-//RAF for only members
-
-add_filter('wpgens_raf_code','gens_raf_code',10,1);
-function gens_raf_code($raf_code) {
-  $user_id = get_current_user_id();
-
-  $args = array( 
-      'status' => array( 'active', 'complimentary', 'pending' ),
-  );  
-  if(!function_exists('wc_memberships_get_user_memberships')) {
-    return $raf_code;
-  }
-  $active_memberships = wc_memberships_get_user_memberships( $user_id, $args );
-  if ( empty( $active_memberships ) ) {
-    return 'Referral code is available only to users with Membership';
-  }
-  return $raf_code;
-}
-add_filter('wpgens_raf_link','gens_raf_link',10,3);
-function gens_raf_link($raf_link, $referral_id, $type) {
-  $user_id = get_current_user_id();
-
-  $args = array( 
-      'status' => array( 'active', 'complimentary', 'pending' ),
-  );  
-  if(!function_exists('wc_memberships_get_user_memberships')) {
-    return $raf_link;
-  }
-  $active_memberships = wc_memberships_get_user_memberships( $user_id, $args );
-  if ( empty( $active_memberships ) ) {
-    return 'Referral link is available only to users with Membership';
-  }
-  return $raf_link;
-}
-
-add_action('wp','wpgens_custom_account_tabs');
-function wpgens_custom_account_tabs(){
-  $user_id = get_current_user_id();
-
-  $args = array( 
-      'status' => array( 'active', 'complimentary', 'pending' ),
-  );  
-  if(!function_exists('wc_memberships_get_user_memberships')) {
-    return;
-  }
-  $active_memberships = wc_memberships_get_user_memberships( $user_id, $args );
-  if ( empty( $active_memberships ) ) {
-  	$gens_plugin = WPGens_RAF::instance();
-  	remove_filter( 'woocommerce_account_menu_items', array($gens_plugin->my_account,'gens_account_menu_item'),10);
-  }
-}
-// Quick View
-function yithpermalink(){
-	echo "<div class='product-yith-pop'>";
-	echo "<a href='".get_permalink(get_the_ID())."'>View Full Product Details</a>";
-	echo "</div>";
-}
-add_action( 'yith_wcqv_product_summary', 'yithpermalink', 35 );
-
-function yithpermatext(){
-	$id = get_the_ID();
-	$subline = get_field('page_headline', $id);
-	echo "<div class='custom-yith-tag'>".$subline."</div>"; ?>
-	<script>jQuery("div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)").addClass("buttons_added").append('<input type="button" value="+" class="plus" />').prepend('<input type="button" value="-" class="minus" />');</script>
-<?php
-}
-add_action( 'yith_wcqv_product_summary', 'yithpermatext', 8 );
-
 
 ?>

@@ -5,10 +5,8 @@
       'post_type' => 'award_shows',
       'posts_per_page' => -1,
       'meta_key' => 'year',
-      'orderby' => array(
-        'meta_value_num' => 'DESC',
-        'date' => 'DESC'
-      )
+      'orderby' => 'meta_value_num',
+      'order' => 'DESC'
     )
   );
 

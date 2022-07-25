@@ -24,13 +24,6 @@
             <img src="<?php the_sub_field('product_image_desktop'); ?>" alt="<?php the_sub_field('link_title'); ?>">
           </a>
         </div>
-		  <p>
-			 
-		  <?php $quick_view_shortcode = '[yith_quick_view product_id=" ' . $product->get_ID() . '"]';
-echo do_shortcode( $quick_view_shortcode );
-			
-			?>
-		  </p>
         <!-- Description -->
         <p class="d-none d-sm-block"><?php the_sub_field('product_description'); ?></p>
         <!-- Button -->

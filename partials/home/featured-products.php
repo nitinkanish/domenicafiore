@@ -32,12 +32,12 @@
             <img src="<?php echo $product_image; ?>" alt="">
           </a>
           <?php if ( $product->get_stock_quantity() != null && $product->get_stock_quantity() < 25 ):  ?>
-            <!-- <div class="df-product-badge">
+            <div class="df-product-badge">
               <svg class="df-badge circle" width="60" height="60" viewBox="0 0 60 60">
                 <path class="shape" d="M30,60A30,30,0,1,0,0,30,30,30,0,0,0,30,60"/>
               </svg>
-              <p class="message"><?php //echo $product->get_stock_quantity(); ?> Left</p>
-            </div> -->
+              <p class="message"><?php echo $product->get_stock_quantity(); ?> Left</p>
+            </div>
           <?php elseif ( get_sub_field('show_badge') ) : ?>
             <div class="df-product-badge">
               <?php if ( get_sub_field('badge_type') == 'circle' ) : ?>
@@ -54,13 +54,6 @@
             </div>
           <?php endif; ?>
         </div>
-		   <p>
-
-		  <?php $quick_view_shortcode = '[yith_quick_view product_id=" ' . $product->get_ID() . '"]';
-echo do_shortcode( $quick_view_shortcode );
-
-			?>
-		  </p>
         <p class="product-description"><?php the_sub_field('product_description'); ?></p>
         <div class="price-container">
           <?php if ( wc_memberships_user_has_member_discount( $product->get_ID() ) ) : ?>

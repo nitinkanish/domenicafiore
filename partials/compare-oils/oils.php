@@ -99,20 +99,6 @@
             </div>
     			<?php endwhile; ?>
         </div>
-		  
-		   <div class="oils-table-row mobile-header-row d-sm-none">
-          <h3><?php _e( 'Polyphenol Count', 'domenicafiore' ); ?></h3>
-        </div>
-
-        <div class="oils-table-row  comparison poly">
-          <?php while ( have_rows('oils') ) : the_row(); ?>
-            <div class="oils-table-cell poly">
-              <h3 class="d-none d-sm-block"><?php _e( 'Polyphenol Count', 'domenicafiore' ); ?></h3>
-              <p><?php the_sub_field('polyphenol_count'); ?></p>
-            </div>
-    			<?php endwhile; ?>
-        </div>
-
 
         <div class="oils-table-row product-add-row">
 
@@ -134,7 +120,7 @@
                 $save_for_later = sprintf( '[ti_wishlists_addtowishlist product_id="%1$s"]', $oil_id );
             ?>
               <div class="name d-sm-none"><?php echo $oil['oil_name']; ?></div>
-              <!--<p class="size"><?php echo $child_product_size; ?></p>-->
+              <p class="size"><?php echo $child_product_size; ?></p>
 
               <?php if ( has_term( 'coming-soon', 'product_tag', $child->get_id() ) ) : ?>
                 <p><?php _e( 'Coming Soon', 'domenicafiore' ); ?></p>

@@ -38,12 +38,12 @@
             </a>
             <p class="size"><?php echo $product_size; ?></p>
             <?php if ( $product_wc->get_stock_quantity() != null && $product_wc->get_stock_quantity() < 25 ):  ?>
-              <!-- <div class="df-product-badge">
+              <div class="df-product-badge">
                 <svg class="df-badge circle" width="60" height="60" viewBox="0 0 60 60">
                   <path class="shape" d="M30,60A30,30,0,1,0,0,30,30,30,0,0,0,30,60"/>
                 </svg>
-                <p class="message"><?php //echo $product_wc->get_stock_quantity(); ?> Left</p>
-              </div> -->
+                <p class="message"><?php echo $product_wc->get_stock_quantity(); ?> Left</p>
+              </div>
             <?php endif; ?>
           </div>
 

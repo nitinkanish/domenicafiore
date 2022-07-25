@@ -59,13 +59,6 @@
         <a href="<?php echo esc_url( get_permalink() ); ?>">
           <img src="<?php echo $related_product_image[0]; ?>" width="50" alt="">
         </a>
-		   <p>
-			 
-		  <?php $quick_view_shortcode = '[yith_quick_view product_id=" ' . $related_product->get_ID() . '"]';
-echo do_shortcode( $quick_view_shortcode );
-			
-			?>
-		  </p>
         <h3>
           <a href="<?php echo esc_url( get_permalink() ); ?>">
             <?php echo df_get_product_name( $related_product->get_ID() ); ?>

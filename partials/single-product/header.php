@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col-12">
       <div class="text-container">
-        <h1 class="conqueror" <?php echo ( $headline_colour ) ? 'style="background-color:' . $headline_colour . '"' : 'style=""'; ?>><?php echo df_get_product_name( $product->get_ID() ); ?></h1>
+        <h1 class="conqueror" <?php echo ( $headline_colour ) ? 'style="color:' . $headline_colour . '"' : 'style=""'; ?>><?php echo df_get_product_name( $product->get_ID() ); ?></h1>
         <h2 class="d-none d-sm-block"><?php the_field('page_headline'); ?></h2>
         <?php if ( $product->get_description() ) : ?>
         <div class="description">
